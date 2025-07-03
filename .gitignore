@@ -1,0 +1,16 @@
+# Node modules
+client/node_modules/
+server/node_modules/
+
+# Logs
+*.log
+
+# dotenv
+client/.env
+server/.env
+
+# Vite output
+client/dist/
+
+# macOS system files
+.DS_Store
