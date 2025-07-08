@@ -15,8 +15,12 @@ app.get("/", (req,res) => {
     res.send("hhiiii");
 })
 
-app.listen(port,() => {
+const startServer = async () => {
+  await connectDB();
+  app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
-})
+  });
+};
 
-connectDB();
+startServer();
+

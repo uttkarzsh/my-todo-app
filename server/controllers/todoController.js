@@ -6,8 +6,8 @@ export const getAllTasks = async (req,res) => {
 }
 
 export const addTask = async (req,res) => {
-    addedTodo = await todo.create({description: req.body.description});
-    res.json(addedTodo);
+    await todo.create({description: req.body.description});
+    res.json({msg: "added"});
 }
 export const updateTask = async (req,res) => {
     const task = await todo.findById(req.params.id);
