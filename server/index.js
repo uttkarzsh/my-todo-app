@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./model/todo.js";
 import router from "./routes/todoRoutes.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -10,6 +11,7 @@ const port = 3000;
 
 app.use(express.json());
 app.use("/api/todo", router);
+app.use(cors());
 
 app.get("/", (req,res) => {
     res.send("hhiiii");
